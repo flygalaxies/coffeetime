@@ -4,31 +4,25 @@ import { graphql, Link } from "gatsby";
 import * as cn from "classnames";
 import "../styles/styles.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAsterisk,
-  faArrowDown,
-  faChevronDown,
-  faChevronUp,
-  faAngleDoubleDown,
-} from "@fortawesome/free-solid-svg-icons";
 import MenuLayout from "../components/MenuLayout";
 import ItemCard from "../components/ItemCard";
 import MenuHeader from "../components/MenuHeader";
 
-const MenuTemplate = ({ data }) => {
+const burgersTemplate = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicMenu.data;
+
+  console.log(doc);
 
   return (
     <MenuLayout
       menuCategories={doc.menu_categories}
-      backgroundImageFluid={doc.specials_background_image?.fluid || null}
+      backgroundImageFluid={doc.burgers_background_image?.fluid || null}
     >
       <div className="h-full border-2">
-        <MenuHeader headerText={doc.specials_header.text} />
+        <MenuHeader headerText={doc.burgers_header.text} />
         {/* MENU ITEMS */}
-        {doc.specials_items?.map((item) => (
+        {doc.burgers_items?.map((item) => (
           <ItemCard item={item} />
         ))}
       </div>
@@ -37,7 +31,7 @@ const MenuTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-  query menuTemplate {
+  query burgersTemplate {
     prismicMenu {
       data {
         menu_categories {
@@ -45,10 +39,10 @@ export const query = graphql`
             text
           }
         }
-        specials_header {
+        burgers_header {
           text
         }
-        specials_background_image {
+        burgers_background_image {
           fluid {
             srcWebp
             srcSetWebp
@@ -59,7 +53,7 @@ export const query = graphql`
             aspectRatio
           }
         }
-        specials_items {
+        burgers_items {
           item_description {
             text
           }
@@ -76,4 +70,4 @@ export const query = graphql`
   }
 `;
 
-export default MenuTemplate;
+export default burgersTemplate;

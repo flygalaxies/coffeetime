@@ -14,8 +14,8 @@ const Navbar = ({ className, hideLogo }) => {
   const menuLinks = [
     { text: "Home", link: "/" },
     { text: "Menu", link: "/menu" },
-    { text: "Who we are", link: "/" },
-    { text: "Get in touch", link: "/" },
+    // { text: "Who we are", link: "/" },
+    // { text: "Get in touch", link: "/" },
   ];
 
   return (

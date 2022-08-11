@@ -2,3 +2,8 @@ import "./src/styles/global.css";
 import "@fontsource/herr-von-muellerhoff/index.css";
 import "@fontsource/source-code-pro/index.css";
 import "@fontsource/source-code-pro/700.css";
+import "@fontsource/advent-pro/index.css";
+import "@fontsource/advent-pro/700.css";
+import "@fontsource/open-sans/index.css";
+import "@fontsource/open-sans/700.css";
+import "@fontsource/open-sans/400-italic.css";

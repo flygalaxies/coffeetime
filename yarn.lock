@@ -1519,6 +1519,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/advent-pro@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/advent-pro/-/advent-pro-4.5.8.tgz#734d71c84cc82b7c36a669eee1316c18ea7ad2d7"
+  integrity sha512-Y9Gs2tge+R2r3z6Tq8zUvLhFM496ipdcbnMgN6W4rhgyOz8Zni8fQqg9vrxyE5sIpqZa8GKYeLqY1k7rZq601Q==
+
 "@fontsource/herr-von-muellerhoff@^4.5.9":
   version "4.5.9"
   resolved "https://registry.yarnpkg.com/@fontsource/herr-von-muellerhoff/-/herr-von-muellerhoff-4.5.9.tgz#f8680a045930ced8cae57f4843c6d2546df2b295"

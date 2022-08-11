@@ -62,3 +62,23 @@ header {
   content: "•";
   margin: 10px;
 }
+
+.left-arrow-orange:after {
+  content: "";
+  position: absolute;
+  border: 13px solid transparent;
+  border-color: transparent transparent transparent rgb(251 146 60);
+  top: -11px;
+  left: 0;
+  display: inline-block;
+}
+
+.right-arrow-orange:after {
+  content: "";
+  position: absolute;
+  border: 13px solid transparent;
+  border-color: transparent rgb(251 146 60) transparent transparent;
+  top: -11px;
+  right: 0;
+  display: inline-block;
+}

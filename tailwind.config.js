@@ -10,6 +10,9 @@ module.exports = {
     fontFamily: {
       SourceCodePro: ["Source Code Pro", "normal"],
       herrVonMuellerhoff: ["Herr Von Muellerhoff", "cursive"],
+      AdventPro: ["Advent Pro", "normal"],
+      OpenSans: ["Open Sans", "normal"],
+      OpenSansCursive: ["Open Sans", "italic"],
     },
   },
   plugins: [],

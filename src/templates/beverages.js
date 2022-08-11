@@ -14,21 +14,27 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import MenuLayout from "../components/MenuLayout";
 import ItemCard from "../components/ItemCard";
-import MenuHeader from "../components/MenuHeader";
 
-const MenuTemplate = ({ data }) => {
+const beveragesTemplate = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicMenu.data;
 
   return (
     <MenuLayout
       menuCategories={doc.menu_categories}
-      backgroundImageFluid={doc.specials_background_image?.fluid || null}
+      backgroundImageFluid={doc.beverages_background_image?.fluid || null}
     >
       <div className="h-full border-2">
-        <MenuHeader headerText={doc.specials_header.text} />
+        <h1 className="font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white">
+          {doc.beverages_header.text}
+        </h1>
+        <div className="text-center py-4 text-orange-400">
+          <span className="absolute inline-block bg-orange-400 left-arrow-orange h-1 w-1/4 left-[25%] translate-y-3 "></span>
+          <FontAwesomeIcon icon={faAsterisk} size="1x" />
+          <span className="absolute inline-block bg-orange-400 right-arrow-orange h-1 w-1/4 right-[5%] translate-y-3"></span>
+        </div>
         {/* MENU ITEMS */}
-        {doc.specials_items?.map((item) => (
+        {doc.beverages_items?.map((item) => (
           <ItemCard item={item} />
         ))}
       </div>
@@ -37,7 +43,7 @@ const MenuTemplate = ({ data }) => {
 };
 
 export const query = graphql`
-  query menuTemplate {
+  query beveragesTemplate {
     prismicMenu {
       data {
         menu_categories {
@@ -45,10 +51,10 @@ export const query = graphql`
             text
           }
         }
-        specials_header {
+        beverages_header {
           text
         }
-        specials_background_image {
+        beverages_background_image {
           fluid {
             srcWebp
             srcSetWebp
@@ -59,7 +65,7 @@ export const query = graphql`
             aspectRatio
           }
         }
-        specials_items {
+        beverages_items {
           item_description {
             text
           }
@@ -76,4 +82,4 @@ export const query = graphql`
   }
 `;
 
-export default MenuTemplate;
+export default beveragesTemplate;
