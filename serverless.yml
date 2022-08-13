@@ -1,4 +1,4 @@
-service: cmswebsite
+service: coffeetimecmswebsite
 
 variablesResolutionMode: 20210326
 
@@ -42,8 +42,8 @@ custom:
 
 provider:
   name: aws
-  region: eu-west-1
-  stage: ${opt:stage, 'dev'}
+  region: af-south-1
+  stage: ${opt:stage, 'prod'}
   deploymentBucket:
     blockPublicAccess: true
   disableDefaultOutputExportNames: true

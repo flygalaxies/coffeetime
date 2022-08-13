@@ -24,6 +24,7 @@ const MenuTemplate = ({ data }) => {
     <MenuLayout
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.specials_background_image?.fluid || null}
+      isDevelop={data.is_develop}
     >
       <div className="h-full border-2">
         <MenuHeader headerText={doc.specials_header.text} />

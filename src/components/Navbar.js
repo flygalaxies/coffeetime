@@ -1,15 +1,29 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 import "../styles/navbar.css";
 import * as cn from "classnames";
 import useScrollPosition from "../hooks/useScrollPosition";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Navbar = ({ className, hideLogo }) => {
-  //   if (!data) return null;
-  //   const document = data.prismicHomepage.data;
-
   const scrollPosition = useScrollPosition();
+
+  const query = useStaticQuery(graphql`
+    query navbar {
+      prismicGlobal {
+        data {
+          logo {
+            alt
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  `);
+
+  if (!query) return null;
+  const doc = query.prismicGlobal.data;
 
   const menuLinks = [
     { text: "Home", link: "/" },
@@ -21,20 +35,30 @@ const Navbar = ({ className, hideLogo }) => {
   return (
     <nav
       className={cn(
-        "flex fixed top-0 z-20 p-9 left-0 w-full",
-        scrollPosition > 300 && "navbar",
+        "flex fixed top-0 z-20 left-0 px-8 py-4 items-center w-full",
+        "sm:py-4",
+        "lg:px-16 lg:py-8",
+        // "lg:items-centeritems-center",
+        // "md:items-center",
+        scrollPosition > 200 && "navbar",
         className
       )}
     >
       {!hideLogo && (
-        <div className="px-8">
+        <div className="w-16">
           <Link to="/">
-            <span>Logo</span>{" "}
+            <div className="w-full">
+              <GatsbyImage
+                alt={doc.logo.alt || ""}
+                image={getImage(doc.logo.gatsbyImageData)}
+                className={""}
+              />
+            </div>
           </Link>
         </div>
       )}
-      <div className="w-full text-white flex-1">
-        <ul className="flex ">
+      <div className="text-white flex-1 h-full">
+        <ul className="flex h-full">
           {menuLinks.map((menu) => (
             <li
               className="px-6 hover:text-orange-400 cursor-pointer"
@@ -50,24 +74,5 @@ const Navbar = ({ className, hideLogo }) => {
     </nav>
   );
 };
-
-// export const query = graphql`
-//   query home {
-//     prismicHomepage {
-//       data {
-//         title {
-//           text
-//         }
-//         intro {
-//           raw
-//         }
-//         main_image {
-//           gatsbyImageData
-//           alt
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export default Navbar;
