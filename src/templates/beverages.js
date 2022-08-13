@@ -1,17 +1,11 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import * as cn from "classnames";
 import "../styles/styles.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAsterisk,
-  faArrowDown,
-  faChevronDown,
-  faChevronUp,
-  faAngleDoubleDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 import MenuLayout from "../components/MenuLayout";
 import ItemCard from "../components/ItemCard";
 
@@ -24,7 +18,7 @@ const beveragesTemplate = ({ data }) => {
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.beverages_background_image?.fluid || null}
     >
-      <div className="h-full border-2">
+      <div className={cn("h-full border-2")}>
         <h1 className="font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white">
           {doc.beverages_header.text}
         </h1>

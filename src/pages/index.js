@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
-import { RichText } from "prismic-reactjs";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import * as cn from "classnames";
@@ -37,17 +36,15 @@ const HomePage = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicHomepage.data;
 
-  console.log(doc);
-
   const backgroundFluidImageStack = [
     doc.main_image.fluid,
     `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.0))`,
   ].reverse();
 
-  const aboutImageFluidStack = [
-    doc.home_about_right_image.fluid,
-    `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.0))`,
-  ].reverse();
+  // const aboutImageFluidStack = [
+  //   doc.home_about_right_image.fluid,
+  //   `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.0))`,
+  // ].reverse();
 
   const contactLeftImageFluidStack = [
     doc.contact_left_image.fluid,
@@ -302,9 +299,30 @@ export const query = graphql`
             aspectRatio
           }
         }
+        seo_page_description {
+          text
+        }
+        seo_title {
+          text
+        }
+        tradinghours {
+          text
+        }
       }
     }
   }
 `;
 
 export default HomePage;
+
+export const Head = ({ data, pageContext }) => (
+  <>
+    {/* <title>Coffee Time Restaurant Official Website</title> */}
+    {/* {console.log(data.prismicHomepage.data.seo_title.text)} */}
+    <title>{data.prismicHomepage.data.seo_title.text}</title>
+    <meta
+      name="description"
+      content={data.prismicHomepage.data.seo_page_description.text}
+    />
+  </>
+);

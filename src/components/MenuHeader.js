@@ -9,7 +9,11 @@ import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 const MenuHeader = ({ headerText }) => {
   return (
     <>
-      <h1 className="font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white">
+      <h1
+        className={cn(
+          "font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white"
+        )}
+      >
         {headerText}
       </h1>
       <div className="text-center py-4 text-orange-400">

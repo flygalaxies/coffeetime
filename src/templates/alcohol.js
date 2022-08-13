@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import * as cn from "classnames";
 import "../styles/styles.css";
@@ -12,14 +12,12 @@ const alcoholTemplate = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicMenu.data;
 
-  console.log(doc);
-
   return (
     <MenuLayout
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.alcohol_background_image?.fluid || null}
     >
-      <div className="h-full border-2">
+      <div className={cn("h-full border-2")}>
         <MenuHeader headerText={doc.alcohol_header.text} />
         {/* MENU ITEMS */}
         {doc.alcohol_items?.map((item) => (

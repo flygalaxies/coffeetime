@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 
 import * as cn from "classnames";
 import "../styles/styles.css";
@@ -21,13 +21,12 @@ const MenuLayout = ({
   ].reverse();
 
   return (
-    <header className="">
+    <header>
       <BackgroundImage
         Tag="div"
         fluid={backgroundFluidImageStack}
         className={`h-full w-full bg-fixed`}
       >
-        {/* <Navbar className={"pl-72"} hideLogo={true} /> */}
         {isDevelop ? (
           <>
             <Navbar className={"sm:pl-72"} hideLogo={false} />
@@ -45,7 +44,7 @@ const MenuLayout = ({
         ) : (
           <>
             <Navbar className={"sm:pl-72"} hideLogo={true} />
-            <div className="flex flex-row h-full">
+            <div className={cn("flex flex-row h-full")}>
               {/* MENU SIDENAV */}
               <div className="w-1/4 h-full menu-sideNav">
                 {/* HEADER */}

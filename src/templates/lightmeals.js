@@ -1,7 +1,6 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
-import * as cn from "classnames";
 import "../styles/styles.css";
 
 import MenuLayout from "../components/MenuLayout";

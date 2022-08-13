@@ -1,17 +1,8 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
-import * as cn from "classnames";
 import "../styles/styles.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAsterisk,
-  faArrowDown,
-  faChevronDown,
-  faChevronUp,
-  faAngleDoubleDown,
-} from "@fortawesome/free-solid-svg-icons";
 import MenuLayout from "../components/MenuLayout";
 import ItemCard from "../components/ItemCard";
 import MenuHeader from "../components/MenuHeader";

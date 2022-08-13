@@ -19,8 +19,9 @@ const GoogleMap = ({ width, height }) => {
       height={height}
       style={{ border: 0, position: "relative" }}
       loading="lazy"
-      allowFullScreen="true"
+      allowFullScreen
       src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCc7gOz-flR4RqWX4cRr72xY&key=AIzaSyDvoxdHgix8iwr6jyNmw2RcvWozmwZ6Tz0"
+      title="coffeetimeGogoleMaps"
     ></iframe>
   );
 };
