@@ -8,8 +8,10 @@ module.exports = {
   siteMetadata: {
     title: "Coffee Time Restaurant",
     description: "Official Website of Coffee Time Restaurant",
+    siteUrl: `https://coffeetimerestaurant.co.za`,
   },
   plugins: [
+    `gatsby-plugin-sitmeap`,
     {
       resolve: "gatsby-source-prismic",
       options: {
