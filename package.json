@@ -1,8 +1,8 @@
 {
-  "name": "aws-website-cms",
+  "name": "CoffeeTime",
   "version": "1.0.0",
-  "description": "Gatsby website hosted on AWS with headless Prismic CMS",
-  "author": "Maciej Radzikowski <maciej@radzikowski.com.pl>",
+  "description": "CoffeeTime website hosted on AWS with headless Prismic CMS",
+  "author": "Ian Tolmay",
   "license": "MIT",
   "scripts": {
     "ci": "yarn install --frozen-lockfile",
@@ -25,6 +25,7 @@
     "gatsby": "^4.19.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-background-image-es5": "^1.6.0",
+    "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-image": "^2.3.0",
     "gatsby-plugin-manifest": "^4.3.0",

@@ -11,7 +11,6 @@ module.exports = {
     siteUrl: `https://coffeetimerestaurant.co.za`,
   },
   plugins: [
-    `gatsby-plugin-sitmeap`,
     {
       resolve: "gatsby-source-prismic",
       options: {
@@ -52,5 +51,6 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-advanced-sitemap",
   ],
 };
