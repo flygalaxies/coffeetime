@@ -25,15 +25,6 @@ header {
   );
 }
 
-/* .arrow-down {
-  width: 70px;
-  height: 50px;
-  bottom: -10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 10;
-} */
-
 .left-arrow:after {
   content: "";
   position: absolute;
@@ -54,9 +45,9 @@ header {
   display: inline-block;
 }
 
-.menu-sideNav {
+/* .menu-sideNav {
   background-color: black;
-}
+} */
 
 .li-copyright:not(:last-of-type):after {
   content: "•";

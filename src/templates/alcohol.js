@@ -17,8 +17,8 @@ const alcoholTemplate = ({ data }) => {
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.alcohol_background_image?.fluid || null}
     >
-      <div className={cn("h-full border-2")}>
-        <MenuHeader headerText={doc.alcohol_header.text} />
+      <MenuHeader headerText={doc.alcohol_header.text} />
+      <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.alcohol_items?.map((item) => (
           <ItemCard item={item} />

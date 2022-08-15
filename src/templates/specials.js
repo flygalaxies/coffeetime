@@ -11,18 +11,19 @@ const specialsTemplate = ({ data }) => {
   if (!data) return null;
   const doc = data.prismicMenu.data;
 
-  console.log(doc);
-
   return (
     <MenuLayout
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.specials_background_image?.fluid || null}
     >
-      <div className="h-full border-2">
-        <MenuHeader headerText={doc.specials_header.text} />
+      <MenuHeader headerText={doc.specials_header.text} />
+      <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.specials_items?.map((item) => (
-          <ItemCard item={item} />
+          <>
+            {console.log(item)}
+            <ItemCard item={item} />
+          </>
         ))}
       </div>
     </MenuLayout>

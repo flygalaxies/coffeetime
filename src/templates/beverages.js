@@ -4,10 +4,9 @@ import { graphql } from "gatsby";
 import * as cn from "classnames";
 import "../styles/styles.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 import MenuLayout from "../components/MenuLayout";
 import ItemCard from "../components/ItemCard";
+import MenuHeader from "../components/MenuHeader";
 
 const beveragesTemplate = ({ data }) => {
   if (!data) return null;
@@ -18,15 +17,8 @@ const beveragesTemplate = ({ data }) => {
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.beverages_background_image?.fluid || null}
     >
-      <div className={cn("h-full border-2")}>
-        <h1 className="font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white">
-          {doc.beverages_header.text}
-        </h1>
-        <div className="text-center py-4 text-orange-400">
-          <span className="absolute inline-block bg-orange-400 left-arrow-orange h-1 w-1/4 left-[25%] translate-y-3 "></span>
-          <FontAwesomeIcon icon={faAsterisk} size="1x" />
-          <span className="absolute inline-block bg-orange-400 right-arrow-orange h-1 w-1/4 right-[5%] translate-y-3"></span>
-        </div>
+      <MenuHeader headerText={doc.beverages_header.text} />
+      <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.beverages_items?.map((item) => (
           <ItemCard item={item} />

@@ -9,15 +9,15 @@ import { faAsterisk } from "@fortawesome/free-solid-svg-icons";
 const MenuHeader = ({ headerText }) => {
   return (
     <>
-      <h1
+      <div
         className={cn(
-          "font-SourceCodePro mt-8 text-5xl font-bold tracking-[9.4px] text-center text-white"
+          "font-SourceCodePro text-5xl font-bold tracking-[9.4px] text-center text-white"
         )}
       >
         {headerText}
-      </h1>
+      </div>
       <div className="text-center py-4 text-orange-400">
-        <span className="absolute inline-block bg-orange-400 left-arrow-orange h-1 w-1/4 left-[25%] translate-y-3 "></span>
+        <span className="absolute inline-block bg-orange-400 left-arrow-orange h-1 w-1/4 left-[5%] translate-y-3 "></span>
         <FontAwesomeIcon icon={faAsterisk} size="1x" />
         <span className="absolute inline-block bg-orange-400 right-arrow-orange h-1 w-1/4 right-[5%] translate-y-3"></span>
       </div>

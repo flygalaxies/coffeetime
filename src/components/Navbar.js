@@ -35,13 +35,13 @@ const Navbar = ({ className, hideLogo }) => {
   return (
     <nav
       className={cn(
-        "flex fixed top-0 z-20 left-0 px-8 py-4 items-center w-full",
-        "sm:py-4",
+        "flex fixed top-0 z-20 px-8 py-4 items-center w-full",
+        // "sm:py-4",
         "lg:px-16 lg:py-8",
         // "lg:items-centeritems-center",
         // "md:items-center",
-        scrollPosition > 200 && "navbar",
-        className
+        className,
+        scrollPosition > 200 && "navbar"
       )}
     >
       {!hideLogo && (
@@ -57,7 +57,7 @@ const Navbar = ({ className, hideLogo }) => {
           </Link>
         </div>
       )}
-      <div className="text-white flex-1 h-full">
+      <div className="text-white flex h-full">
         <ul className="flex h-full">
           {menuLinks.map((menu) => (
             <li

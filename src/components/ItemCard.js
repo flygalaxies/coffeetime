@@ -5,7 +5,7 @@ import "../styles/styles.css";
 
 const ItemCard = ({ item }) => {
   return (
-    <div className={cn("px-4 py-2 font-SourceCodePro mx-8 ")}>
+    <div className={cn("px-4 py-2 font-SourceCodePro mx-2 ")}>
       <div className="w-full  p-4">
         <div className="flex">
           <div className="w-full font-bold text-orange-100 text-3xl">

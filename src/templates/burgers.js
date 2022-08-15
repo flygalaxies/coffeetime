@@ -18,8 +18,8 @@ const burgersTemplate = ({ data }) => {
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.burgers_background_image?.fluid || null}
     >
-      <div className="h-full border-2">
-        <MenuHeader headerText={doc.burgers_header.text} />
+      <MenuHeader headerText={doc.burgers_header.text} />
+      <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.burgers_items?.map((item) => (
           <ItemCard item={item} />

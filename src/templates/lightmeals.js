@@ -18,8 +18,8 @@ const lightmealsTemplate = ({ data }) => {
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.lightmeals_background_image?.fluid || null}
     >
-      <div className="h-full border-2">
-        <MenuHeader headerText={doc.lightmeals_header.text} />
+      <MenuHeader headerText={doc.lightmeals_header.text} />
+      <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.lightmeals_items?.map((item) => (
           <ItemCard item={item} />
