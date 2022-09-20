@@ -189,14 +189,17 @@ const HomePage = ({ data }) => {
           <div className={cn("h-96 flex flex-col py-8", "sm:flex-row")}>
             <div className={cn("w-full h-full py-4", "sm:py-16 sm:px-8")}>
               <div className="h-full w-full text-center text-black">
-                <div className="relative">
+                <a
+                  href={`tel:${data.prismicGlobal.data.company_phone.text}`}
+                  className="relative"
+                >
                   <h2 className="font-herrVonMuellerhoff text-orange-300 text-8xl font-bold -mb-10">
                     Tel:
                   </h2>
                   <h3 className="font-SourceCodePro mt-4 text-4xl tracking-[9.4px] font-bold">
                     {data.prismicGlobal.data.company_phone.text}
                   </h3>
-                </div>
+                </a>
               </div>
             </div>
             <div className="h-full w-full sm:px-4" id="googleMapContainer">
