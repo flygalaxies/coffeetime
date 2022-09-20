@@ -49,8 +49,6 @@ const MenuLayout = ({
     `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.3))`,
   ].reverse();
 
-  // isDevelop = false;
-
   return (
     <header>
       <BackgroundImage

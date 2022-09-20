@@ -15,7 +15,7 @@ const MenuTemplate = ({ data }) => {
     <MenuLayout
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.specials_background_image?.fluid || null}
-      isDevelop={data.is_develop}
+      isDevelop={doc.is_develop}
       menuTitle="Specials"
       hideMenu={false}
     >
@@ -23,7 +23,7 @@ const MenuTemplate = ({ data }) => {
         <MenuHeader headerText={doc.specials_header.text} />
         {/* MENU ITEMS */}
         {doc.specials_items?.map((item) => (
-          <ItemCard item={item} />
+          <ItemCard item={item} key={item.item_name.text} />
         ))}
       </div>
     </MenuLayout>
@@ -34,6 +34,7 @@ export const query = graphql`
   query menuTemplate {
     prismicMenu {
       data {
+        is_develop
         menu_categories {
           category_name {
             text

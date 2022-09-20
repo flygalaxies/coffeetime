@@ -15,14 +15,14 @@ const specialsTemplate = ({ data }) => {
     <MenuLayout
       menuCategories={doc.menu_categories}
       backgroundImageFluid={doc.specials_background_image?.fluid || null}
+      isDevelop={doc.is_develop}
     >
       <MenuHeader headerText={doc.specials_header.text} />
       <div className="h-full overflow-auto">
         {/* MENU ITEMS */}
         {doc.specials_items?.map((item) => (
           <>
-            {console.log(item)}
-            <ItemCard item={item} />
+            <ItemCard item={item} key={item.item_name.text} />
           </>
         ))}
       </div>
@@ -34,6 +34,7 @@ export const query = graphql`
   query specialsTemplate {
     prismicMenu {
       data {
+        is_develop
         menu_categories {
           category_name {
             text
