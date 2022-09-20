@@ -82,7 +82,15 @@ const HomePage = ({ data }) => {
               <FontAwesomeIcon icon={faAsterisk} size="1x" />
               <span className="absolute inline-block bg-white right-arrow h-1 w-1/4 right-[15%] translate-y-2"></span>
             </div>
-            <span>Now Open</span>
+            <h2 className="text-orange-300 font-SourceCodePro text-2xl font-bold">
+              Under New Management!
+            </h2>
+            <div className="text-orange-100">
+              Same Staff, Same Style, Better Experience!
+            </div>
+            <div>
+              <br />
+            </div>
             <div>{doc.tradinghours?.text || ""}</div>
             <div className="mt-8">
               <button className="bg-white text-black rounded-xl py-2 px-4 hover:bg-orange-400">
