@@ -1,0 +1,109 @@
+.fab-container {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.fab-main-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(175, 143, 107, 0.5);
+    transition: all var(--transition-normal);
+}
+
+.fab-main-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(175, 143, 107, 0.65);
+}
+
+.fab-menu {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 260px;
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+    transition: all var(--transition-normal);
+}
+
+.fab-container.open .fab-menu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.fab-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+    text-decoration: none;
+    color: inherit;
+}
+
+.fab-menu-item:hover {
+    background: rgba(175, 143, 107, 0.1);
+}
+
+.fab-icon-small {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.fab-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.fab-text strong {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.fab-text span {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.call-action:hover {
+    background: rgba(175, 143, 107, 0.15);
+}
+
+.call-action:hover .fab-text strong {
+    color: var(--color-primary);
+}
+
+@media (max-width: 480px) {
+    .fab-container {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .fab-main-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fab-menu {
+        min-width: 240px;
+    }
+}

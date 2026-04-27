@@ -1,0 +1,306 @@
+.home-page {
+    /* Home styles */
+}
+
+.hero-section {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/promo-1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.brand-title-container {
+    margin-bottom: 2rem;
+}
+
+.brand-welcome {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: -1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-title-main {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.brand-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.brand-divider .line {
+    height: 2px;
+    background-color: var(--color-primary);
+    width: 120px;
+}
+
+.brand-divider .asterisk {
+    color: var(--color-primary);
+    margin: 0 1.5rem;
+    font-size: 2.5rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Promo Section */
+.promo-section {
+    padding: 4rem 1.5rem;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+}
+
+.promo-card {
+    display: flex;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-bg-card);
+}
+
+.promo-content {
+    flex: 1;
+    padding: 3rem;
+}
+
+.promo-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.promo-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.promo-features {
+    margin-bottom: 2rem;
+}
+
+.promo-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.promo-features span {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.promo-price-tag {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.promo-price-tag span {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+.promo-image-container {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+}
+
+.promo-image {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    background-image: url('../assets/carvery.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Story Section */
+.story-section {
+    padding: 6rem 1.5rem;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-image-container {
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+}
+
+.story-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-image: url('../assets/story-img.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md);
+}
+
+.story-text-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-text-container p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.features {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.feature-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+/* Info Section */
+.info-section {
+    padding: 6rem 0;
+    background-color: rgba(0,0,0,0.02);
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.contact-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(175, 143, 107, 0.1);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 1rem;
+    transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-primary-dark);
+}
+
+.hours-list {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.map-container {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+/* Social Section */
+.social-section {
+    padding: 6rem 1.5rem;
+}
+
+/* Fade Up Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .brand-title-main { font-size: 3rem; }
+    .brand-welcome { font-size: 2rem; }
+    .promo-card { flex-direction: column; }
+    .story-grid { grid-template-columns: 1fr; }
+    .contact-cards { grid-template-columns: 1fr; }
+    .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+}
