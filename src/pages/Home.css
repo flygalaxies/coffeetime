@@ -280,8 +280,9 @@
 }
 
 /* Social Section */
-.social-section {
-    padding: 6rem 1.5rem;
+section.social-section {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 /* Fade Up Animations */

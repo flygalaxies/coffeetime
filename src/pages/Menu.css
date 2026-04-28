@@ -36,8 +36,8 @@
     opacity: 0.9;
 }
 
-.menu-container {
-    padding-top: 3rem;
+.menu-container.container {
+    padding-top: 5rem;
 }
 
 .category-filter-bar {

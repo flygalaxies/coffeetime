@@ -1,7 +1,7 @@
 .footer {
     background-color: var(--color-bg-card);
     border-top: 1px solid var(--color-border);
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 7rem;
     color: var(--color-text-muted);
 }
 
