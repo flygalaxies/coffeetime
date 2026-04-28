@@ -30,7 +30,9 @@
 }
 
 .fab-menu {
-    background: var(--color-bg-card);
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-lg);
     padding: 0.75rem;
     display: flex;
