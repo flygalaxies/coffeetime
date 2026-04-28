@@ -30,21 +30,11 @@
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 
-  --color-bg: var(--color-bg-light);
-  --color-bg-card: var(--color-bg-card-light);
-  --color-text: var(--color-text-light);
-  --color-text-muted: var(--color-text-muted-light);
-  --color-border: var(--color-border-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: var(--color-bg-dark);
-    --color-bg-card: var(--color-bg-card-dark);
-    --color-text: var(--color-text-dark);
-    --color-text-muted: var(--color-text-muted-dark);
-    --color-border: var(--color-border-dark);
-  }
+  --color-bg: var(--color-bg-dark);
+  --color-bg-card: var(--color-bg-card-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-muted: var(--color-text-muted-dark);
+  --color-border: var(--color-border-dark);
 }
 
 * {
