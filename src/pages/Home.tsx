@@ -58,7 +58,7 @@ const Home = () => {
                                 <li><span>✓</span> Decadent Pudding</li>
                             </ul>
                             <div className="promo-price-tag">
-                                <span>Only</span> R140 <span>pp</span>
+                                <span>Only</span> R145 <span>pp</span>
                             </div>
                         </div>
                         <div className="promo-image-container">

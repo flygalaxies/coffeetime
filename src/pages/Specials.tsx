@@ -31,7 +31,7 @@ const Specials = () => {
                                 <li><span>✓</span> Traditional Rich Gravy</li>
                                 <li><span>✓</span> A Decadent Pudding to finish</li>
                             </ul>
-                            <div className="special-price">R140 <span>per person</span></div>
+                            <div className="special-price">R145 <span>per person</span></div>
                             <div className="special-action">
                                 <a href="tel:0799770962" className="btn btn-primary">Call to Book Now</a>
                             </div>

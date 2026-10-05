@@ -174,7 +174,7 @@ export const menuItems: MenuItem[] = [
     createItem("Veggie Pasta", "Spinach, feta & olives in a creamy white sauce", "R110", "Grills, Pizza, Pasta & Seafood", true),
     createItem("Spaghetti Bolognese", "Bolognese mince served on spaghetti", "R120", "Grills, Pizza, Pasta & Seafood"),
 
-    createItem("Sunday Carvery", "Eat-in: roast beef, roast potatoes, rice & 3 seasonal vegetables. (Sundays Only)", "R140", "Grills, Pizza, Pasta & Seafood"),
+    createItem("Sunday Carvery", "Eat-in: roast beef, roast potatoes, rice & 3 seasonal vegetables. (Sundays Only)", "R145", "Grills, Pizza, Pasta & Seafood"),
 
     // DELIGHTFUL PLEASURES
     createItem("Muffin: Blueberry / Carrot & nut", "Served warm with butter and jam", "R45", "Delightful Pleasures", true),
